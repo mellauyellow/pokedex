@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+$black: #161616;
+$grey: #747474;
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	background: $black;
+	color: $grey;
+	font-size: 12px;
+	height: 100%;
+	padding-right: 10px;
+}
+
+header {
+	display: flex;
+	img {
+		z-index: 1;
+	}
+	div {
+		background: url(/assets/pokedex-header-nav.png);
+		width: 100%;
+		height: 46px;
+		margin-right: -10px;
+	}
+}
+
+.pokedex {
+	display: flex;
+}
+
+.pokemon-index {
+	margin: 20px;
+	width: 240px;
+}
+
+.pokemon-detail {
+	width: 100%;
+	border: 5px solid red;
+	padding: 20px;
+	text-align: center;
+	background-color: #d1ccb6;
+}
+
+.pokemon-index-item img {
+	width: 20px;
+}
+
+.pokemon-index-item {
+	list-style: none;
+	padding: 5px;
+	border-bottom: 1px solid gray;
+}
+
+h1 {
+	font-size: 34px;
+}
+
+.pokemon-items {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
