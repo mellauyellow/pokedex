@@ -4,6 +4,10 @@ html, body {
 	border: 0;
 }
 
+ul {
+	padding: 0;
+}
+
 li {
 	list-style: none;
 }

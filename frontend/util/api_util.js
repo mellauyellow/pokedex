@@ -15,11 +15,13 @@ export const fetchPokemonDetail = (pokemonId, success) => {
   });
 };
 
-export const postNewPokemon = (pokemon, success) => {
+export const postNewPokemon = (pokemon, success, error) => {
+  // debugger
   $.ajax({
     method: 'POST',
     url: 'api/pokemon',
     data: pokemon,
-    success
+    success,
+    error
   });
 };

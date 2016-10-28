@@ -1,13 +1,16 @@
 class Api::PokemonController < ApplicationController
   def index
+    sleep 2
     @pokemon = Pokemon.all
   end
 
   def show
+    sleep 2
     @pokemon = Pokemon.find_by_id(params[:id])
   end
 
   def update
+    sleep 2
     @pokemon = Pokemon.find_by_id(params[:id])
 
     if @pokemon.update_attributes(pokemon_params)
@@ -18,6 +21,7 @@ class Api::PokemonController < ApplicationController
   end
 
   def create
+    sleep 2
     @pokemon = Pokemon.new(pokemon_params)
 
     if @pokemon.save
@@ -28,6 +32,7 @@ class Api::PokemonController < ApplicationController
   end
 
   def destroy
+    sleep 2
     @poke = Pokemon.find_by_id(params[:id])
     @poke.delete
     @pokemon = Pokemon.all
@@ -41,8 +46,8 @@ class Api::PokemonController < ApplicationController
                                     :attack,
                                     :defense,
                                     :poke_type,
-                                    :moves,
-                                    :image_url)
+                                    :image_url,
+                                    moves: [])
   end
 
 end
